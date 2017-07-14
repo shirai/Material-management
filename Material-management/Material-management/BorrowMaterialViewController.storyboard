@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PAs-NA-Xcp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--借りる機器を選択-->
+        <scene sceneID="AN4-gY-9Xy">
+            <objects>
+                <viewController id="PAs-NA-Xcp" customClass="BorrowMaterialViewController" customModule="Material_management" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Olv-Wc-JTa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dkv-f3-PgK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Mh-Pq-cQA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uap-1c-9ju">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PAs-NA-Xcp" id="B2i-JF-yEC"/>
+                                    <outlet property="delegate" destination="PAs-NA-Xcp" id="8kS-En-maj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uap-1c-9ju" firstAttribute="leading" secondItem="6Mh-Pq-cQA" secondAttribute="leading" id="d4l-Qm-d6U"/>
+                            <constraint firstAttribute="trailing" secondItem="Uap-1c-9ju" secondAttribute="trailing" id="sBK-mK-SAB"/>
+                            <constraint firstItem="Dkv-f3-PgK" firstAttribute="top" secondItem="Uap-1c-9ju" secondAttribute="bottom" id="xnQ-Om-v7H"/>
+                            <constraint firstItem="Uap-1c-9ju" firstAttribute="top" secondItem="6Mh-Pq-cQA" secondAttribute="top" id="y28-Si-6Q1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="借りる機器を選択" id="nUR-Zh-C6A">
+                        <barButtonItem key="leftBarButtonItem" title="ログアウト" id="qpG-jW-h5W">
+                            <connections>
+                                <action selector="onTapLogoutButton:" destination="PAs-NA-Xcp" id="ljz-kN-qdB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="完了" style="done" id="fmx-fG-2ha">
+                            <connections>
+                                <action selector="onTapDoneButton:" destination="PAs-NA-Xcp" id="LUU-e7-YjM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Uap-1c-9ju" id="CMb-8a-hyb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsT-hi-9Ym" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+    </scenes>
+</document>
