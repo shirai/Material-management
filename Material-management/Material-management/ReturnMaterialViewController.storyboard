@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YE3-1K-k3F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z31-eM-3K3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,44 +9,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Return Material View Controller-->
-        <scene sceneID="Zgy-Xn-zf6">
+        <!--返す機器を選択-->
+        <scene sceneID="J6K-hT-2OW">
             <objects>
-                <viewController id="YE3-1K-k3F" customClass="ReturnMaterialViewController" customModule="Material_management" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z31-eM-3K3" customClass="ReturnMaterialViewController" customModule="Material_management" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JtV-4a-lrv"/>
-                        <viewControllerLayoutGuide type="bottom" id="yiW-yl-aeF"/>
+                        <viewControllerLayoutGuide type="top" id="cfk-mz-7Wf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zej-Dg-LS0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UKC-1X-P8B">
+                    <view key="view" contentMode="scaleToFill" id="eZL-oa-gbC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wEZ-JJ-gPQ">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AZ-Ae-ps7">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jtu-Uw-ROT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="z31-eM-3K3" id="d4B-pW-zEi"/>
+                                    <outlet property="delegate" destination="z31-eM-3K3" id="Xny-9u-W8x"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1AZ-Ae-ps7" firstAttribute="top" secondItem="wEZ-JJ-gPQ" secondAttribute="bottom" constant="8" symbolic="YES" id="7Kg-Sj-b8K"/>
-                            <constraint firstItem="1AZ-Ae-ps7" firstAttribute="centerX" secondItem="wEZ-JJ-gPQ" secondAttribute="centerX" id="J2k-gc-0Fa"/>
-                            <constraint firstAttribute="centerX" secondItem="wEZ-JJ-gPQ" secondAttribute="centerX" id="MLl-ZV-oGQ"/>
-                            <constraint firstAttribute="centerY" secondItem="wEZ-JJ-gPQ" secondAttribute="centerY" id="Ngb-tD-8nq"/>
+                            <constraint firstItem="Jtu-Uw-ROT" firstAttribute="leading" secondItem="eZL-oa-gbC" secondAttribute="leading" id="MO1-d0-B6v"/>
+                            <constraint firstItem="Jtu-Uw-ROT" firstAttribute="top" secondItem="eZL-oa-gbC" secondAttribute="top" id="kox-C7-rxR"/>
+                            <constraint firstItem="Zej-Dg-LS0" firstAttribute="top" secondItem="Jtu-Uw-ROT" secondAttribute="bottom" id="rIv-Ne-5M4"/>
+                            <constraint firstAttribute="trailing" secondItem="Jtu-Uw-ROT" secondAttribute="trailing" id="tjp-9n-wmP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="返す機器を選択" id="GTG-0m-tGW">
+                        <barButtonItem key="leftBarButtonItem" title="ログアウト" id="QHo-EY-HIg">
+                            <connections>
+                                <action selector="onTapLogoutButton:" destination="z31-eM-3K3" id="mSi-jF-hP9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="完了" style="done" id="HAc-Bq-rZ7">
+                            <connections>
+                                <action selector="onTapDoneButton:" destination="z31-eM-3K3" id="cI9-8m-6aa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Jtu-Uw-ROT" id="cl0-sr-0Fs"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WF0-IX-ue3" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIo-U7-gp2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="750" y="-320"/>
         </scene>
     </scenes>
 </document>
