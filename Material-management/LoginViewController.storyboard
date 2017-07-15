@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XMu-iX-hg0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ログイン-->
+        <scene sceneID="Pls-tU-eYb">
+            <objects>
+                <viewController id="xQL-P6-GM5" customClass="LoginViewController" customModule="Material_management" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fGe-co-9Jb"/>
+                        <viewControllerLayoutGuide type="bottom" id="J1m-gd-4nD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5cE-Vs-BBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3xU-Oj-wWa">
+                                <rect key="frame" x="16" y="74" width="343" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザーを選択してください" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EX-bO-EbK">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ews-aS-mRE">
+                                        <rect key="frame" x="0.0" y="30.5" width="343" height="29"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Engineer"/>
+                                            <segment title="QA"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changedSegment:" destination="xQL-P6-GM5" eventType="valueChanged" id="pzA-wW-myl"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v1H-wx-RU8">
+                                <rect key="frame" x="0.0" y="140.5" width="375" height="480.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xQL-P6-GM5" id="4Dz-L9-JUW"/>
+                                    <outlet property="delegate" destination="xQL-P6-GM5" id="v7o-Kr-ArH"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yph-T7-OeE">
+                                <rect key="frame" x="16" y="629" width="343" height="30"/>
+                                <state key="normal" title="ログインせずに進む"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapCloseButton:" destination="xQL-P6-GM5" eventType="touchUpInside" id="mQO-KJ-A6y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yph-T7-OeE" firstAttribute="top" secondItem="v1H-wx-RU8" secondAttribute="bottom" constant="8" id="1PZ-O0-k2K"/>
+                            <constraint firstItem="3xU-Oj-wWa" firstAttribute="top" secondItem="fGe-co-9Jb" secondAttribute="bottom" constant="10" id="H22-H7-C2G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3xU-Oj-wWa" secondAttribute="trailing" id="PrB-tM-vKs"/>
+                            <constraint firstItem="3xU-Oj-wWa" firstAttribute="leading" secondItem="5cE-Vs-BBQ" secondAttribute="leadingMargin" id="UWj-rx-u9q"/>
+                            <constraint firstItem="v1H-wx-RU8" firstAttribute="top" secondItem="3xU-Oj-wWa" secondAttribute="bottom" constant="8" id="Vvw-rF-wUn"/>
+                            <constraint firstItem="J1m-gd-4nD" firstAttribute="top" secondItem="Yph-T7-OeE" secondAttribute="bottom" constant="8" id="XSN-yF-y0p"/>
+                            <constraint firstItem="Yph-T7-OeE" firstAttribute="trailing" secondItem="5cE-Vs-BBQ" secondAttribute="trailingMargin" id="XyZ-Mt-Ir2"/>
+                            <constraint firstItem="Yph-T7-OeE" firstAttribute="leading" secondItem="5cE-Vs-BBQ" secondAttribute="leadingMargin" id="hyC-ii-o0a"/>
+                            <constraint firstItem="v1H-wx-RU8" firstAttribute="leading" secondItem="5cE-Vs-BBQ" secondAttribute="leading" id="o8U-Gf-Yzs"/>
+                            <constraint firstAttribute="trailing" secondItem="v1H-wx-RU8" secondAttribute="trailing" id="pla-mV-Afl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ログイン" id="G33-bn-VMW"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Izc-S5-692" id="HIT-ja-ris"/>
+                        <outlet property="tableView" destination="v1H-wx-RU8" id="BEY-j8-JCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvs-gs-6rM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Izc-S5-692">
+                    <connections>
+                        <outlet property="delegate" destination="xQL-P6-GM5" id="AF1-ha-79B"/>
+                        <outlet property="searchContentsController" destination="xQL-P6-GM5" id="OFc-DD-eeF"/>
+                        <outlet property="searchResultsDataSource" destination="xQL-P6-GM5" id="gs0-lO-teL"/>
+                        <outlet property="searchResultsDelegate" destination="xQL-P6-GM5" id="b6W-3U-LO7"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-162.40000000000001" y="-151.57421289355324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S5G-cW-fPg">
+            <objects>
+                <navigationController id="XMu-iX-hg0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz9-58-njH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xQL-P6-GM5" kind="relationship" relationship="rootViewController" id="drF-8E-8FW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnS-0S-s5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-929" y="-152"/>
+        </scene>
+    </scenes>
+</document>

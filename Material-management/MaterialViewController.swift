@@ -20,7 +20,8 @@ internal class MaterialViewController: UIViewController {
     
     @IBAction func onTapLogoutButton(_ sender: UIBarButtonItem) {
         
-        print("TODO: ログインモーダルを表示する（プロトコルで実装）")
+        let vc = UIStoryboard.instantiateInitialViewController(classType: LoginViewController.self)
+        navigationController?.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func onTapDoneButton(_ sender: UIBarButtonItem) {
