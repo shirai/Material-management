@@ -17,6 +17,7 @@
 		C9DC49FB1F1923CC005B8FE3 /* BorrowMaterialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DC49FA1F1923CC005B8FE3 /* BorrowMaterialViewController.storyboard */; };
 		C9DC49FE1F192495005B8FE3 /* ReturnMaterialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DC49FD1F192495005B8FE3 /* ReturnMaterialViewController.storyboard */; };
 		C9DC4A001F192A85005B8FE3 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC49FF1F192A85005B8FE3 /* Material.swift */; };
+		C9DC4A061F19CA36005B8FE3 /* MaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC4A051F19CA36005B8FE3 /* MaterialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C9DC49FA1F1923CC005B8FE3 /* BorrowMaterialViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BorrowMaterialViewController.storyboard; sourceTree = "<group>"; };
 		C9DC49FD1F192495005B8FE3 /* ReturnMaterialViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReturnMaterialViewController.storyboard; sourceTree = "<group>"; };
 		C9DC49FF1F192A85005B8FE3 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		C9DC4A051F19CA36005B8FE3 /* MaterialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		C9DC49F81F191CED005B8FE3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9DC4A051F19CA36005B8FE3 /* MaterialViewController.swift */,
 				C9DC49F91F1923B8005B8FE3 /* BorrowMaterialViewController */,
 				C9DC49FC1F19248C005B8FE3 /* ReturnMaterialViewController */,
 			);
@@ -274,6 +277,7 @@
 				C9DC49D71F191ADA005B8FE3 /* ReturnMaterialViewController.swift in Sources */,
 				C9DC49D31F191ADA005B8FE3 /* AppDelegate.swift in Sources */,
 				C9DC49D51F191ADA005B8FE3 /* BorrowMaterialViewController.swift in Sources */,
+				C9DC4A061F19CA36005B8FE3 /* MaterialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +489,7 @@
 				C9DC49F01F191ADA005B8FE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9DC49F11F191ADA005B8FE3 /* Build configuration list for PBXNativeTarget "Material-managementTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +498,7 @@
 				C9DC49F31F191ADA005B8FE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
