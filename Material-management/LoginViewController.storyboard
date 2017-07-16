@@ -87,6 +87,7 @@
                     <navigationItem key="navigationItem" title="ログイン" id="G33-bn-VMW"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="Izc-S5-692" id="HIT-ja-ris"/>
+                        <outlet property="segmentedControl" destination="ews-aS-mRE" id="c0O-ql-6KI"/>
                         <outlet property="tableView" destination="v1H-wx-RU8" id="BEY-j8-JCO"/>
                     </connections>
                 </viewController>

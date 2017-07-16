@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A177497CB4FE716CEE745F7 /* Pods_Material_managementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F28CFADE481887F7F7D640 /* Pods_Material_managementTests.framework */; };
 		451684A86E5B9831A048E841 /* Pods_Material_management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B79443DB9DD3A9E79BF2F2 /* Pods_Material_management.framework */; };
+		C95951261F1B12C90073C246 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95951251F1B12C90073C246 /* User.swift */; };
 		C996208F1F1A2CDE00544C47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C996208E1F1A2CDE00544C47 /* LoginViewController.swift */; };
 		C99620911F1A2CFC00544C47 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99620901F1A2CFC00544C47 /* LoginViewController.storyboard */; };
 		C99620931F1A2E0D00544C47 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99620921F1A2E0D00544C47 /* UIViewExtension.swift */; };
@@ -43,6 +44,7 @@
 		C1F28CFADE481887F7F7D640 /* Pods_Material_managementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Material_managementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88354ADE70DB50337962985 /* Pods-Material-management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Material-management.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Material-management/Pods-Material-management.debug.xcconfig"; sourceTree = "<group>"; };
 		C8B79443DB9DD3A9E79BF2F2 /* Pods_Material_management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Material_management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C95951251F1B12C90073C246 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C996208E1F1A2CDE00544C47 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C99620901F1A2CFC00544C47 /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		C99620921F1A2E0D00544C47 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C9DC49FF1F192A85005B8FE3 /* Material.swift */,
+				C95951251F1B12C90073C246 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				C99620931F1A2E0D00544C47 /* UIViewExtension.swift in Sources */,
 				C996208F1F1A2CDE00544C47 /* LoginViewController.swift in Sources */,
 				C9DC4A061F19CA36005B8FE3 /* MaterialViewController.swift in Sources */,
+				C95951261F1B12C90073C246 /* User.swift in Sources */,
 				C99620951F1A318000544C47 /* NSObjectExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

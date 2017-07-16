@@ -10,7 +10,7 @@ import UIKit
 
 internal class MaterialViewController: UIViewController {
     
-    var materials = [MaterialType: [Material]]()
+    fileprivate var materials = [MaterialType: [Material]]()
     
     // MARK: IBOutlets
     
